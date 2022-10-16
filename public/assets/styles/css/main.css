@@ -1,0 +1,988 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: none;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  overflow: overlay;
+}
+body::-webkit-scrollbar {
+  width: 0.7em;
+  background-color: transparent;
+}
+body::-webkit-scrollbar-track {
+  margin-top: 35px;
+}
+body::-webkit-scrollbar-thumb {
+  height: 70px;
+  border-radius: 50px;
+  background-color: #A8ADFF;
+  outline: 1px solid rgba(0, 17, 255, 0.2862745098);
+}
+body::-webkit-scrollbar-thumb:hover {
+  background-color: #0010FF;
+  transform: scale(2);
+}
+body header {
+  display: flex;
+  padding: 0 12.45%;
+  padding-top: 46.5px;
+  background: linear-gradient(-100deg, rgba(0, 17, 255, 0.0901960784) -105.24%, rgba(255, 255, 255, 0) 54.35%);
+}
+body header .logo {
+  width: 30%;
+  margin: auto;
+}
+body header .logo .logoImg {
+  width: 51%;
+}
+body header nav {
+  width: 40%;
+  margin: auto;
+}
+body header nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+body header nav ul li a {
+  padding: 8px 12px;
+  font-family: "Roboto";
+  font-size: 14px;
+  color: #050505;
+  padding: 12px 14px;
+}
+body header div:last-child {
+  width: 30%;
+  display: flex;
+  justify-content: flex-end;
+}
+body header div:last-child button {
+  display: flex;
+}
+body header div:last-child button a {
+  display: inline-block;
+  position: relative;
+  color: #ffffff;
+  background-color: #0010FF;
+  font-font-weight: 400;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  padding: 12px 14px;
+  width: 150px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+body header div:last-child button a {
+  transition: all 0.2s linear 0s;
+}
+body header div:last-child button a:before {
+  content: "\f054";
+  font-family: FontAwesome;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  height: 100%;
+  width: 30px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 0 50% 50% 0;
+  transform: scale(0, 1);
+  transform-origin: left center;
+  transition: all 0.2s linear 0s;
+}
+body header div:last-child button a:hover {
+  text-indent: 30px;
+}
+body header div:last-child button a:hover:before {
+  transform: scale(1, 1);
+  text-indent: 0;
+}
+body .hero {
+  padding: 0 12.45%;
+  padding-top: 99px;
+  background: #ffffff url("../../images/vectors/heroBgImage.svg") no-repeat 100% -85px;
+  background-size: cover;
+  max-width: 100%;
+}
+body .hero .ctaContainer {
+  width: 53%;
+  padding-top: 50px;
+}
+body .hero .ctaContainer h2 {
+  font-weight: 700;
+  line-height: 70px;
+  font-size: 50px;
+  text-indent: -1.1em;
+  font-family: "Space Grotesk";
+  background: linear-gradient(101.05deg, #FF0000 7.8%, #98C1FF 44%, #0010FF 89.27%);
+  background-size: 300%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animateCtaText 7s linear alternate-reverse both;
+}
+body .hero .ctaContainer h2::before {
+  content: " ";
+  left: 30px;
+  width: 54px;
+  bottom: 4px;
+  height: 55px;
+  position: relative;
+  display: inline-block;
+  background-size: 55px 55px;
+  background-image: url("../../images/vectors/cShape.svg");
+}
+@keyframes animateCtaText {
+  from {
+    background-position: 0%;
+  }
+  to {
+    background-position: 300%;
+  }
+}
+body .hero .ctaContainer p {
+  font-size: 20px;
+  color: #333333;
+  line-height: 35px;
+  font-family: "Inter";
+  margin: 16px 8% 90px 0;
+}
+body .hero .ctaContainer .ctaBtnContainer {
+  display: flex;
+}
+body .hero .ctaContainer .ctaBtnContainer button:first-child {
+  display: flex;
+}
+body .hero .ctaContainer .ctaBtnContainer button:first-child a {
+  display: inline-block;
+  position: relative;
+  color: #ffffff;
+  background-color: #0010FF;
+  font-font-weight: 400;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  padding: 12px 14px;
+  width: 150px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+body .hero .ctaContainer .ctaBtnContainer button:first-child a {
+  transition: all 0.2s linear 0s;
+}
+body .hero .ctaContainer .ctaBtnContainer button:first-child a:before {
+  content: "\f054";
+  font-family: FontAwesome;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  height: 100%;
+  width: 30px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 0 50% 50% 0;
+  transform: scale(0, 1);
+  transform-origin: left center;
+  transition: all 0.2s linear 0s;
+}
+body .hero .ctaContainer .ctaBtnContainer button:first-child a:hover {
+  text-indent: 30px;
+}
+body .hero .ctaContainer .ctaBtnContainer button:first-child a:hover:before {
+  transform: scale(1, 1);
+  text-indent: 0;
+}
+body .hero .ctaContainer .ctaBtnContainer button:first-child a {
+  width: 195px;
+  margin-right: 30px;
+}
+body .hero .ctaContainer .ctaBtnContainer button:last-child a {
+  font-weight: 400;
+  font-size: 14px;
+  color: #333333;
+  font-family: "Roboto";
+  padding: 12px 14px;
+  border-radius: 4px;
+  transition: all 0.5s;
+  overflow: hidden;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+body .hero .ctaContainer .ctaBtnContainer button:last-child a:hover {
+  outline: 1px solid #7B9292;
+}
+body .hero .ctaContainer .ctaBtnContainer button:last-child a:hover span {
+  padding-right: 20px;
+}
+body .hero .ctaContainer .ctaBtnContainer button:last-child a:hover span::after {
+  opacity: 1;
+  right: 0;
+}
+body .hero .ctaContainer .ctaBtnContainer button:last-child a span {
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+body .hero .ctaContainer .ctaBtnContainer button:last-child a span::after {
+  content: "»";
+  font-size: 22px;
+  position: absolute;
+  opacity: 0;
+  top: -6px;
+  right: 20px;
+  color: #333333;
+  transition: 0.5s;
+}
+body .hero .testimonials {
+  height: 100vh;
+  font-size: 16px;
+  font-weight: 700;
+  padding-top: 140px;
+  color: #333333;
+  font-family: "Space Grotesk";
+}
+body .hero .testimonials img {
+  width: 28%;
+  margin-top: 18px;
+}
+body section.ourTools {
+  text-align: center;
+  padding: 0 12.45%;
+  padding-top: 120px;
+}
+body section.ourTools div:first-child {
+  margin-bottom: 120px;
+}
+body section.ourTools div:first-child h2 {
+  color: #333333;
+  font-weight: 700;
+  line-height: 50px;
+  font-size: 32.5px;
+  font-family: "Space Grotesk";
+}
+body section.ourTools div:first-child p {
+  padding: 7px 33% 0;
+  font-weight: 400;
+  line-height: 24px;
+  font-family: "Inter";
+  font-size: 14px;
+}
+body section.ourTools div:nth-child(2) {
+  display: flex;
+}
+body section.ourTools div:nth-child(2) article img {
+  width: 7.5%;
+}
+body section.ourTools div:nth-child(2) article h3 {
+  font-weight: 700;
+  color: #111827;
+  font-size: 24.5px;
+  margin: 14px 0 7px 0;
+  font-family: "Space Grotesk";
+}
+body section.ourTools div:nth-child(2) article p {
+  padding: 0 10%;
+  font-weight: 400;
+  line-height: 20px;
+  font-family: "Inter";
+  color: #333333;
+  font-size: 14px;
+  color: #374151;
+}
+body section.aggregatePayment {
+  display: flex;
+  height: 800px;
+  margin-top: 250px;
+  padding: 0 12.45%;
+  padding-right: 7%;
+  background: #ffffff url("../../images/vectors/aggregatePaymentBgImage.svg") no-repeat 0 0;
+  background-size: contain;
+}
+body section.aggregatePayment .leftSubsection {
+  width: 55%;
+}
+body section.aggregatePayment .rightSubsection {
+  width: 45%;
+  margin-top: 130px;
+}
+body section.aggregatePayment .rightSubsection h2 {
+  color: #333333;
+  font-weight: 700;
+  line-height: 50px;
+  font-size: 32.5px;
+  font-family: "Space Grotesk";
+}
+body section.aggregatePayment .rightSubsection p {
+  margin-top: 12px;
+  padding-right: 15%;
+  font-weight: 400;
+  line-height: 20px;
+  font-family: "Inter";
+  color: #333333;
+  font-size: 14px;
+  line-height: 28px;
+}
+body section.aggregatePayment .rightSubsection p a {
+  color: #0010FF;
+}
+body section.aggregatePayment .rightSubsection button {
+  display: flex;
+  margin-top: 55px;
+}
+body section.aggregatePayment .rightSubsection button a {
+  display: inline-block;
+  position: relative;
+  color: #ffffff;
+  background-color: #0010FF;
+  font-font-weight: 400;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  padding: 12px 14px;
+  width: 150px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+body section.aggregatePayment .rightSubsection button a {
+  transition: all 0.2s linear 0s;
+}
+body section.aggregatePayment .rightSubsection button a:before {
+  content: "\f054";
+  font-family: FontAwesome;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  height: 100%;
+  width: 30px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 0 50% 50% 0;
+  transform: scale(0, 1);
+  transform-origin: left center;
+  transition: all 0.2s linear 0s;
+}
+body section.aggregatePayment .rightSubsection button a:hover {
+  text-indent: 30px;
+}
+body section.aggregatePayment .rightSubsection button a:hover:before {
+  transform: scale(1, 1);
+  text-indent: 0;
+}
+body section.aggregatePayment .rightSubsection button a {
+  width: 220px;
+}
+body section.bams {
+  display: flex;
+  height: 800px;
+  margin: 250px 0;
+  padding: 0 12.45%;
+  background: #ffffff url("../../images/vectors/manageMultipleBamsBgImage.svg") no-repeat 125px -80px;
+  background-size: contain;
+}
+body section.bams .leftSubsection {
+  width: 60%;
+  margin-top: 100px;
+}
+body section.bams .leftSubsection h2 {
+  color: #333333;
+  font-weight: 700;
+  line-height: 50px;
+  font-size: 32.5px;
+  font-family: "Space Grotesk";
+}
+body section.bams .leftSubsection p {
+  margin-top: 20px;
+  padding-right: 37%;
+  font-weight: 400;
+  line-height: 20px;
+  font-family: "Inter";
+  color: #333333;
+  font-size: 14px;
+}
+body section.bams .leftSubsection div {
+  display: flex;
+  width: 80%;
+  margin: 65px 0 60px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+body section.bams .leftSubsection div ul li {
+  display: flex;
+  font-weight: 400;
+  line-height: 20px;
+  font-family: "Inter";
+  color: #333333;
+  font-size: 14px;
+  padding: 10px 0;
+  font-weight: 700;
+  font-family: Roboto;
+}
+body section.bams .leftSubsection div ul img {
+  width: 22px;
+  margin-right: 10px;
+}
+body section.bams .leftSubsection button {
+  display: flex;
+  margin-top: 55px;
+}
+body section.bams .leftSubsection button a {
+  display: inline-block;
+  position: relative;
+  color: #ffffff;
+  background-color: #0010FF;
+  font-font-weight: 400;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  padding: 12px 14px;
+  width: 150px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+body section.bams .leftSubsection button a {
+  transition: all 0.2s linear 0s;
+}
+body section.bams .leftSubsection button a:before {
+  content: "\f054";
+  font-family: FontAwesome;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  height: 100%;
+  width: 30px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 0 50% 50% 0;
+  transform: scale(0, 1);
+  transform-origin: left center;
+  transition: all 0.2s linear 0s;
+}
+body section.bams .leftSubsection button a:hover {
+  text-indent: 30px;
+}
+body section.bams .leftSubsection button a:hover:before {
+  transform: scale(1, 1);
+  text-indent: 0;
+}
+body section.bams .leftSubsection button a {
+  width: 220px;
+}
+body section.bams .rightSubsection {
+  width: 40%;
+}
+body section.feesCollection {
+  display: flex;
+  height: 1500px;
+  margin: 250px 0 30px;
+  padding: 0 12.45%;
+  background: #ffffff url("../../images/vectors/feesCollectionBgImage.svg") no-repeat 0 10px;
+  background-size: contain;
+}
+body section.feesCollection .leftSubsection {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body section.feesCollection .leftSubsection h2 {
+  margin-top: -405px;
+  padding: 0 10% 30px 0;
+  color: #333333;
+  font-weight: 700;
+  line-height: 50px;
+  font-size: 32.5px;
+  font-family: "Space Grotesk";
+  color: #ffffff;
+}
+body section.feesCollection .leftSubsection div {
+  display: flex;
+  width: 80%;
+  flex-direction: row;
+  justify-content: space-between;
+}
+body section.feesCollection .leftSubsection div ul li {
+  display: flex;
+  font-weight: 400;
+  line-height: 20px;
+  font-family: "Inter";
+  color: #333333;
+  font-size: 14px;
+  color: #ffffff;
+  padding: 10px 0;
+  letter-spacing: 1px;
+  font-family: Roboto;
+}
+body section.feesCollection .leftSubsection div ul img {
+  width: 22px;
+  margin-right: 10px;
+}
+body section.feesCollection .rightSubsection {
+  width: 40%;
+}
+body section.easyIntegration {
+  display: flex;
+  height: 400px;
+  padding: 0 12.45%;
+  background-size: contain;
+}
+body section.easyIntegration .leftSection {
+  width: 40%;
+  margin-top: 30px;
+}
+body section.easyIntegration .leftSection h2 {
+  color: #333333;
+  font-weight: 700;
+  line-height: 50px;
+  font-size: 32.5px;
+  font-family: "Space Grotesk";
+}
+body section.easyIntegration .leftSection p {
+  font-weight: 400;
+  line-height: 20px;
+  font-family: "Inter";
+  color: #333333;
+  font-size: 14px;
+  padding: 20px 14% 20px 0;
+}
+body section.easyIntegration .rightSection {
+  width: 60%;
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+}
+body section.easyIntegration .rightSection img {
+  max-width: 75%;
+}
+body section.otherServices {
+  display: flex;
+  height: 760px;
+  padding: 0 12.45%;
+  padding-right: 10%;
+  background: linear-gradient(0deg, #F1F6FD -13.75%, rgba(241, 246, 253, 0.7) 20.5%, #F1F6FD 100%);
+}
+body section.otherServices .leftSection {
+  width: 48%;
+  margin-top: 80px;
+}
+body section.otherServices .leftSection .cardsContainer {
+  width: 100%;
+  height: 83%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+body section.otherServices .leftSection .cardsContainer div {
+  width: 47%;
+  height: 45%;
+  padding: 24px;
+  display: flex;
+  border-radius: 10px;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #ffffff;
+  background-image: url(../../images/vectors/circularDots.svg), url(../../images/vectors/userFriendlyIcon.svg);
+  background-position: right top, 24px 20px;
+  background-repeat: no-repeat, no-repeat;
+  background-color: #ffffff;
+  background-size: 30px, 25px;
+  box-shadow: 3px 3px 3px black;
+}
+body section.otherServices .leftSection .cardsContainer div h2 {
+  font-size: 20px;
+  font-weight: 500;
+  padding-top: 50px;
+  color: #050505;
+  font-family: "Space Grotesk";
+}
+body section.otherServices .leftSection .cardsContainer div p {
+  font-weight: 400;
+  line-height: 20px;
+  font-family: "Inter";
+  color: #333333;
+  font-size: 14px;
+  font-size: 13px;
+  font-family: "Inter";
+  color: #7B9292;
+}
+body section.otherServices .leftSection .cardsContainer div button {
+  display: flex;
+  align-content: flex-start;
+  margin-top: 15px;
+}
+body section.otherServices .leftSection .cardsContainer div button a {
+  color: #0010FF;
+  padding: 10px 14px;
+  border-radius: 4px;
+}
+body section.otherServices .leftSection .cardsContainer div button a:hover {
+  outline: 1px solid #7B9292;
+}
+body section.otherServices .rightSection {
+  width: 52%;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  padding-left: 13%;
+  margin-top: 180px;
+}
+body section.otherServices .rightSection h2 {
+  color: #333333;
+  font-weight: 700;
+  line-height: 50px;
+  font-size: 32.5px;
+  font-family: "Space Grotesk";
+}
+body section.otherServices .rightSection p {
+  margin-top: 20px;
+  font-weight: 400;
+  line-height: 20px;
+  font-family: "Inter";
+  color: #333333;
+  font-size: 14px;
+  font-size: 15px;
+}
+body section.yearsOfExperience {
+  display: flex;
+  height: 1500px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 12.45%;
+  background: #ffffff url("../../images/vectors/yearsOfExperienceBgImage.svg") no-repeat 0 -5px;
+  background-size: cover;
+}
+body section.yearsOfExperience .topSection {
+  display: flex;
+  margin-top: 290px;
+  flex-direction: column;
+}
+body section.yearsOfExperience .topSection h2 {
+  color: #333333;
+  font-weight: 700;
+  line-height: 50px;
+  font-size: 32.5px;
+  font-family: "Space Grotesk";
+  text-align: center;
+  color: #ffffff;
+}
+body section.yearsOfExperience .topSection p {
+  font-weight: 400;
+  line-height: 20px;
+  font-family: "Inter";
+  color: #333333;
+  font-size: 14px;
+  color: #D9D9D9;
+  text-align: center;
+  line-height: 25px;
+  padding: 5px 18%;
+}
+body section.yearsOfExperience .bottomSection {
+  display: flex;
+  margin-top: 110px;
+}
+body section.yearsOfExperience .bottomSection div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+body section.yearsOfExperience .bottomSection div h2 {
+  color: #333333;
+  font-weight: 700;
+  line-height: 50px;
+  font-size: 32.5px;
+  font-family: "Space Grotesk";
+  color: #ffffff;
+}
+body section.yearsOfExperience .bottomSection div p {
+  font-weight: 400;
+  line-height: 20px;
+  font-family: "Inter";
+  color: #333333;
+  font-size: 14px;
+  color: #7B9292;
+  text-align: center;
+  padding: 20px 15% 0;
+}
+body section.aboutUs {
+  display: flex;
+  height: 1000px;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 12.45%;
+  background: #ffffff url("../../images/vectors/aboutUsBgImage.svg") no-repeat 0 270px;
+  background-size: contain;
+}
+body section.aboutUs .topSection {
+  text-align: center;
+  margin-top: -250px;
+}
+body section.aboutUs .topSection h2 {
+  color: #333333;
+  font-weight: 700;
+  line-height: 50px;
+  font-size: 32.5px;
+  font-family: "Space Grotesk";
+}
+body section.aboutUs .topSection p {
+  font-weight: 400;
+  line-height: 20px;
+  font-family: "Inter";
+  color: #333333;
+  font-size: 14px;
+  margin-top: 18px;
+}
+body section.aboutUs .slides {
+  display: flex;
+  position: relative;
+  top: 140px;
+  justify-content: space-between;
+}
+body section.aboutUs .slides div {
+  width: 31%;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: #ffffff;
+}
+body section.aboutUs .slides div img {
+  margin-bottom: 15px;
+}
+body section.aboutUs .slides div h4 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #333333;
+  font-family: "Space Grotesk";
+}
+body section.aboutUs .slides div .jobTitle {
+  font-size: 12px;
+  font-weight: 400;
+  padding: 7px 0 30px;
+  font-family: "Inter";
+}
+body section.aboutUs .slides div .comment {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 22px;
+  font-style: italic;
+  font-family: "Inter";
+}
+body section.aboutUs .sliderDotsContainer {
+  position: relative;
+  top: 170px;
+  display: flex;
+  justify-content: center;
+}
+body section.aboutUs .sliderDotsContainer ul {
+  display: flex;
+  width: 8%;
+  justify-content: space-around;
+}
+body section.aboutUs .sliderDotsContainer ul li img {
+  width: 9px;
+}
+body section.readyToGetStarted {
+  display: flex;
+  height: 700px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 12.45%;
+  background: #ffffff url("../../images/vectors/readyToGetStartedBgImage.svg") no-repeat 170px 0px;
+  background-size: 75% 75%;
+}
+body section.readyToGetStarted h2 {
+  color: #333333;
+  font-weight: 700;
+  line-height: 50px;
+  font-size: 32.5px;
+  font-family: "Space Grotesk";
+  color: #ffffff;
+  margin-top: -150px;
+}
+body section.readyToGetStarted p {
+  font-weight: 400;
+  line-height: 20px;
+  font-family: "Inter";
+  color: #333333;
+  font-size: 14px;
+  text-align: center;
+  color: #F4F4F4;
+  padding: 25px 18% 0;
+}
+body section.readyToGetStarted div {
+  width: 40%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 100px;
+}
+body section.readyToGetStarted div button:first-child {
+  display: flex;
+}
+body section.readyToGetStarted div button:first-child a {
+  display: inline-block;
+  position: relative;
+  color: #ffffff;
+  background-color: #0010FF;
+  font-font-weight: 400;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  padding: 12px 14px;
+  width: 150px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+body section.readyToGetStarted div button:first-child a {
+  transition: all 0.2s linear 0s;
+}
+body section.readyToGetStarted div button:first-child a:before {
+  content: "\f054";
+  font-family: FontAwesome;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0px;
+  height: 100%;
+  width: 30px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 0 50% 50% 0;
+  transform: scale(0, 1);
+  transform-origin: left center;
+  transition: all 0.2s linear 0s;
+}
+body section.readyToGetStarted div button:first-child a:hover {
+  text-indent: 30px;
+}
+body section.readyToGetStarted div button:first-child a:hover:before {
+  transform: scale(1, 1);
+  text-indent: 0;
+}
+body section.readyToGetStarted div button:first-child a {
+  width: 195px;
+  color: #231A36;
+  background-color: #ffffff;
+}
+body section.readyToGetStarted div button:first-child a:before {
+  color: #ffffff;
+  background-color: rgba(0, 16, 255, 0.3);
+}
+body section.readyToGetStarted div button:last-child {
+  display: flex;
+}
+body section.readyToGetStarted div button:last-child a {
+  font-weight: 400;
+  font-size: 14px;
+  color: #333333;
+  font-family: "Roboto";
+  padding: 12px 14px;
+  border-radius: 4px;
+  transition: all 0.5s;
+  overflow: hidden;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+body section.readyToGetStarted div button:last-child a:hover {
+  outline: 1px solid #7B9292;
+}
+body section.readyToGetStarted div button:last-child a:hover span {
+  padding-right: 20px;
+}
+body section.readyToGetStarted div button:last-child a:hover span::after {
+  opacity: 1;
+  right: 0;
+}
+body section.readyToGetStarted div button:last-child a span {
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+body section.readyToGetStarted div button:last-child a span::after {
+  content: "»";
+  font-size: 22px;
+  position: absolute;
+  opacity: 0;
+  top: -6px;
+  right: 20px;
+  color: #333333;
+  transition: 0.5s;
+}
+body section.readyToGetStarted div button:last-child a {
+  width: 150px;
+  color: #ffffff;
+  background: none;
+  border: 1px solid #ffffff;
+}
+body section.readyToGetStarted div button:last-child a:hover {
+  outline: none;
+}
+body section.readyToGetStarted div button:last-child a span::after {
+  color: #ffffff;
+}
+body footer {
+  display: flex;
+  padding: 0 12.45%;
+  padding-top: 140px;
+  padding-bottom: 180px;
+  box-shadow: 2px 0px 3px rgba(0, 16, 255, 0.15);
+}
+body footer .comapanyInfo {
+  width: 20%;
+}
+body footer .comapanyInfo .socials {
+  display: flex;
+  margin: 20px 0;
+  justify-content: space-between;
+}
+body footer .comapanyInfo .socials li img {
+  width: 25px;
+}
+body footer .comapanyInfo .address {
+  font-weight: 400;
+  line-height: 20px;
+  font-family: "Inter";
+  color: #333333;
+  font-size: 14px;
+}
+body footer .footerMenu {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10%;
+}
+body footer .footerMenu ul li {
+  font-weight: 400;
+  line-height: 20px;
+  font-family: "Inter";
+  color: #333333;
+  font-size: 14px;
+  padding-bottom: 8px;
+}
+body footer .footerMenu ul li a {
+  color: #333333;
+}
+body footer .footerMenu ul li a:hover {
+  text-decoration: underline;
+}
+body footer .footerMenu ul li:first-child {
+  font-weight: 700;
+}
+body footer .footerMenu .locations li img {
+  width: 20px;
+  margin-right: 12px;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,631 @@
+@import 'myBootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+body {
+    width: 100%;
+    overflow: overlay;
+    &::-webkit-scrollbar { // background-color
+        width: .7em;
+        background-color: transparent;
+    }
+    &::-webkit-scrollbar-track { // Track 
+        margin-top: 35px;
+    }
+    &::-webkit-scrollbar-thumb { // Handle
+        height: 70px;
+        border-radius: 50px;
+        background-color: #A8ADFF; 
+        outline: 1px solid #0011ff49;
+        &:hover {
+            background-color: $blueBgColor;
+            transform: scale(2);
+        }
+    }
+    header { // header
+        display: flex;
+        @include leftRightPadding;
+        padding-top: 46.5px;
+        background: linear-gradient(-100deg, #0011ff17 -105.24%, rgba(255, 255, 255, 0) 54.35%);
+        .logo {
+            width: 30%;
+            margin: auto;
+            .logoImg {
+                width: 51%;
+            }
+        }
+        nav { // nav menu
+            width: 40%;
+            margin: auto;
+            ul {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                li a {
+                    @include linkBtn;
+                }
+            }
+        }
+        div:last-child {
+            width: 30%;
+            display: flex;
+            justify-content: flex-end;
+            button { // sign in button
+                display: flex;
+                @include animatedBlueBtn;
+            }
+        }
+    }
+
+    .hero { // hero
+        @include leftRightPadding;
+        padding-top: 99px;
+        background: $whiteBgColor url("../../images/vectors/heroBgImage.svg") no-repeat 100% -85px;
+        background-size: cover;
+        max-width: 100%;
+        .ctaContainer { // "All your payment solutions in one place" container
+            width: 53%;
+            padding-top: 50px;
+            // .box {
+            //     display: block;
+            //     width: 100px;
+            //     height: 100px;
+            //     border: 2px solid red;
+            //   }
+            h2 {
+                font-weight: 700;
+                line-height: 70px;
+                font-size: 50px;
+                text-indent: -1.1em;
+                font-family: 'Space Grotesk';
+                background: linear-gradient(101.05deg, #FF0000 7.8%, #98C1FF 44%, #0010FF 89.27%);
+                background-size: 300%;
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                animation: animateCtaText 7s linear alternate-reverse both;
+                &::before {
+                    content: ' ';
+                    left: 30px;
+                    width: 54px;
+                    bottom: 4px;
+                    height: 55px;
+                    position: relative;
+                    display: inline-block;
+                    background-size: 55px 55px;
+                    background-image: url("../../images/vectors/cShape.svg");                        
+                }
+            }
+            @keyframes animateCtaText {
+                from {
+                    background-position: 0%;
+                }
+                to {
+                    background-position: 300%;
+                }
+            }
+            p {
+                font-size: 20px;
+                color: $primaryColor;
+                line-height: 35px;
+                font-family: 'Inter';
+                margin: 16px 8% 90px 0;
+            }
+            .ctaBtnContainer { // "All your payment solutions in one place" buttons container
+                display: flex;
+                button:first-child { // "Create a free account" button
+                    display: flex;
+                    @include animatedBlueBtn;
+                    a {
+                        width: 195px;
+                        margin-right: 30px;
+                    }
+                }
+                button:last-child { // Contact sales link
+                    @include animatedLinkBtn;
+                }
+            }
+        }  
+        .testimonials { // "trusted by" texts
+            height: 100vh;
+            font-size: 16px;
+            font-weight: 700;
+            padding-top: 140px;
+            color: $primaryColor;
+            font-family: "Space Grotesk";
+            img {
+                width: 28%;
+                margin-top: 18px;
+            }
+        }      
+    }
+    section.ourTools { // "Grow your business with our tools" section
+        text-align: center;
+        @include leftRightPadding;
+        padding-top: 120px;
+        div:first-child { // "Grow your business with our tools" header div
+            margin-bottom: 120px;
+            h2 {
+                @include headingFontSize;
+            }
+            p {
+                padding: 7px 33% 0;
+                font-weight: 400;
+                line-height: 24px;
+                font-family: "Inter";
+                font-size:  $primaryFontSize;
+            }
+        }
+        div:nth-child(2) { // "Robust workflow", "Flexibility", "User friendly" div container
+            display: flex;
+            article {
+                img {
+                    width: 7.5%;
+                }
+                h3 {
+                    font-weight: 700;
+                    color: #111827;
+                    font-size: 24.5px;
+                    margin: 14px 0 7px 0;
+                    font-family: "Space Grotesk";
+                }
+                p {
+                    padding: 0 10%;
+                    @include primaryFontSize;
+                    color: #374151;
+                }
+            }
+        }
+    }
+    section.aggregatePayment { // Aggregates payment via... section
+        display: flex;
+        height: 800px;
+        margin-top: 250px;
+        @include leftRightPadding;
+        padding-right: 7%;
+        background: $whiteBgColor url("../../images/vectors/aggregatePaymentBgImage.svg") no-repeat 0 0;
+        background-size: contain;
+        .leftSubsection {
+            width: 55%;
+        }
+        .rightSubsection {
+            width: 45%;
+            margin-top: 130px;
+            h2 {
+                @include headingFontSize;
+            }
+            p {
+                margin-top: 12px;
+                padding-right: 15%; 
+                @include inlineLinkColor;
+                @include primaryFontSize;
+                line-height: 28px;
+            }
+            button {
+                display: flex;
+                margin-top: 55px;
+                @include animatedBlueBtn;
+                a {
+                    width: 220px;
+                }
+            }
+        }
+    } 
+    section.bams { // "Manage multiple bank accounts.." section
+        display: flex;
+        height: 800px;
+        margin: 250px 0;
+        @include leftRightPadding;
+        background: $whiteBgColor url("../../images/vectors/manageMultipleBamsBgImage.svg") no-repeat 125px -80px;
+        background-size: contain;
+        .leftSubsection {
+            width: 60%;
+            margin-top: 100px;
+            h2 {
+                @include headingFontSize;
+            }
+            p {
+                margin-top: 20px;
+                padding-right: 37%;
+                @include primaryFontSize;
+            }
+            div {
+                display: flex;
+                width: 80%;
+                margin: 65px 0 60px;
+                flex-direction: row;
+                justify-content: space-between;
+                ul {
+                    li {
+                        display: flex;
+                        @include primaryFontSize;
+                        padding: 10px 0;
+                        font-weight: 700;
+                        font-family: Roboto;
+                    }
+                    img {
+                        width: 22px;
+                        margin-right: 10px;
+                    }
+                }
+            }
+            button {
+                display: flex;
+                margin-top: 55px;
+                @include animatedBlueBtn;
+                a {
+                    width: 220px;
+                }
+            }
+        }
+        .rightSubsection {
+            width: 40%;
+        }
+    }
+    section.feesCollection { // "Fees Collection and Utility Payment" section
+        display: flex;
+        height: 1500px;
+        margin: 250px 0 30px;
+        @include leftRightPadding;
+        background: $whiteBgColor url("../../images/vectors/feesCollectionBgImage.svg") no-repeat 0 10px;
+        background-size: contain;
+        .leftSubsection {
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            h2 {
+                margin-top: -405px;
+                padding: 0 10% 30px 0;
+                @include headingFontSize;
+                color: $whiteColor;
+            }
+            div {
+                display: flex;
+                width: 80%;
+                flex-direction: row;
+                justify-content: space-between;
+                ul {
+                    li {
+                        display: flex;
+                        @include primaryFontSize;
+                        color: $whiteColor;
+                        padding: 10px 0;
+                        letter-spacing: 1px;
+                        font-family: Roboto;
+                    }
+                    img {
+                        width: 22px;
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+        .rightSubsection {
+            width: 40%;
+        }
+    }  
+    section.easyIntegration { // "Easy Integrations" section
+        display: flex;
+        height: 400px;
+        @include leftRightPadding;
+        background-size: contain;
+        .leftSection {
+            width: 40%;
+            margin-top: 30px;
+            h2 {
+                @include headingFontSize;
+            }
+            p {
+                @include primaryFontSize;
+                padding: 20px 14% 20px 0;
+            }
+        }
+        .rightSection {
+            width: 60%;
+            display: flex;
+            align-items: baseline;
+            justify-content: flex-end;
+            img {
+                max-width: 75%;
+            }
+        }
+    }   
+    section.otherServices {
+        display: flex;
+        height: 760px;
+        @include leftRightPadding;
+        padding-right: 10%;
+        background: linear-gradient(0deg, #F1F6FD -13.75%, rgba(241, 246, 253, 0.7) 20.5%, #F1F6FD 100%);
+        .leftSection {
+            width: 48%;
+            margin-top: 80px;
+            .cardsContainer {
+                width: 100%;
+                height: 83%;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                div { // card
+                    width: 47%;
+                    height: 45%;
+                    padding: 24px;
+                    display: flex;
+                    border-radius: 10px;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    background-color: $whiteBgColor;
+                    background-image: url(../../images/vectors/circularDots.svg), url(../../images/vectors/userFriendlyIcon.svg);
+                    background-position: right top, 24px 20px;
+                    background-repeat: no-repeat, no-repeat;
+                    background-color: $whiteBgColor;
+                    background-size: 30px, 25px;
+                    box-shadow: 3px 3px 3px black;
+                    h2 {
+                        font-size: 20px;
+                        font-weight: 500;
+                        padding-top: 50px;
+                        color: $navListColor;
+                        font-family: 'Space Grotesk';
+                    }
+                    p {
+                        // padding-top: 1px;
+                        @include primaryFontSize;
+                        font-size: 13px;
+                        font-family: 'Inter';
+                        color: $dimGreyColor;
+                    }
+                    button {
+                        display: flex;
+                        align-content: flex-start;
+                        margin-top: 15px;
+                        a {
+                            color: $secondaryColor;
+                            padding: 10px 14px;
+                            border-radius: 4px;
+                            &:hover {
+                                outline: 1px solid $dimGreyColor;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .rightSection {
+            width: 52%;
+            display: flex;
+            justify-content:start;
+            flex-direction: column;
+            padding-left: 13%;
+            margin-top: 180px;
+            h2 {
+                @include headingFontSize;
+            }
+            p {
+                margin-top: 20px;
+                @include primaryFontSize;
+                font-size: 15px;
+            }
+        }
+    }
+
+    section.yearsOfExperience { // "18 Years of experience" section
+        display: flex;
+        height: 1500px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @include leftRightPadding;
+        background: $whiteBgColor url("../../images/vectors/yearsOfExperienceBgImage.svg") no-repeat 0 -5px;
+        background-size: cover;
+        .topSection {
+            display: flex;
+            margin-top: 290px;
+            flex-direction: column;
+            h2 {
+                @include headingFontSize;
+                text-align: center;
+                color: $whiteColor;
+            }
+            p {
+                @include primaryFontSize;
+                color: $greyColor;
+                text-align: center;
+                line-height: 25px;
+                padding: 5px 18%;
+            }
+        }
+        .bottomSection {
+            display: flex;
+            margin-top: 110px;
+            div {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                h2 {
+                    @include headingFontSize;
+                    color: $whiteColor;
+                }
+                p {
+                    @include primaryFontSize;
+                    color: $dimGreyColor;
+                    text-align: center;
+                    padding: 20px 15% 0;
+                }
+            }
+        }
+    }
+    section.aboutUs { // "What do people say about us" section
+        display: flex;
+        height: 1000px;
+        flex-direction: column;
+        justify-content: center;
+        @include leftRightPadding;
+        background: $whiteBgColor url("../../images/vectors/aboutUsBgImage.svg") no-repeat 0 270px;
+        background-size: contain;
+        .topSection {
+            text-align: center;
+            margin-top: -250px;
+            h2 {
+                @include headingFontSize;
+            }
+            p {
+                @include primaryFontSize;
+                margin-top: 18px;
+            }
+        }
+        .slides {
+                display: flex;
+                position: relative;
+                top: 140px;
+                justify-content: space-between;
+            div {
+                width: 31%;
+                padding: 20px;
+                border-radius: 20px;
+                background-color: $whiteBgColor;
+                img {
+                    margin-bottom: 15px;
+                }
+                h4 {
+                    font-size: 16px;
+                    font-weight: 700;
+                    color: $primaryColor;
+                    font-family: "Space Grotesk";
+                }
+                .jobTitle {
+                    font-size: 12px;
+                    font-weight: 400;
+                    padding: 7px 0 30px;
+                    font-family: "Inter";
+                }
+                .comment {
+                    font-size: 15px;
+                    font-weight: 300;
+                    line-height: 22px;
+                    font-style: italic;
+                    font-family: "Inter";
+                }
+            }
+        }
+        .sliderDotsContainer {
+            position: relative;
+            top: 170px;
+            display: flex;
+            justify-content: center;
+            ul {
+                display: flex;
+                width: 8%;
+                justify-content: space-around;
+                li img {
+                    width: 9px;
+                }
+            }
+        }
+    }
+    section.readyToGetStarted { // "Ready to get started?" section
+        display: flex;
+        height: 700px;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        @include leftRightPadding;
+        background: $whiteBgColor url("../../images/vectors/readyToGetStartedBgImage.svg") no-repeat 170px 0px;
+        background-size: 75% 75%;
+        h2 {
+            @include headingFontSize;
+            color: $whiteColor;
+            margin-top: -150px;
+        }
+        p {
+            @include primaryFontSize;
+            text-align: center;
+            color: #F4F4F4;
+            padding: 25px 18% 0;
+        }
+        div {
+            width: 40%;
+            display: flex;
+            justify-content: space-around;
+            margin-top: 100px;
+            button:first-child {
+                display: flex;
+                @include animatedBlueBtn;
+                a {
+                    width: 195px;
+                    color: #231A36;
+                    background-color: $whiteBgColor;
+                    &:before {
+                        color: $whiteColor;
+                        background-color: rgba($blueBgColor, 0.3);
+                    }
+                }
+            }
+            button:last-child {
+                display: flex;
+                @include animatedLinkBtn;
+                a {
+                    width: 150px;
+                    color: $whiteColor;
+                    background: none;
+                    border: 1px solid $whiteColor;
+                    &:hover {
+                        outline: none;
+                    }
+                    span {
+                        &::after {
+                            color: $whiteColor;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    footer { // footer
+        display: flex;
+        @include leftRightPadding;
+        padding-top: 140px;
+        padding-bottom: 180px;
+        box-shadow: 2px 0px 3px rgba(0, 16, 255, 0.15);
+        .comapanyInfo {
+            width: 20%;
+            .socials {
+                display: flex;
+                margin: 20px 0;
+                justify-content: space-between;
+                li img {
+                    width: 25px;
+                }
+            }
+            .address {
+                @include primaryFontSize;
+            }
+        }
+        .footerMenu {
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+            padding-left: 10%;
+            ul {
+                li {
+                    @include primaryFontSize;
+                    padding-bottom: 8px;
+                    a {
+                        color: $primaryColor;
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                    &:first-child {
+                        font-weight: 700;
+                    }
+                }
+            }
+            .locations {
+                li img {
+                    width: 20px;
+                    margin-right: 12px;
+                }
+            }
+        }
+    }
+}
