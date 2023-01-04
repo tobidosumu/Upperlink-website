@@ -66,6 +66,9 @@ $secondaryFontSize: 18px;
     font-size: $primaryFontSize;
     color: $navListColor;
     padding: 12px 14px;
+    &:hover {
+        color: $blueBgColor;
+    }
 }
 @mixin inlineLinkColor {
     a {

@@ -60,6 +60,9 @@ body header nav ul li a {
   color: #050505;
   padding: 12px 14px;
 }
+body header nav ul li a:hover {
+  color: #0010FF;
+}
 body header div:last-child {
   width: 30%;
   display: flex;
@@ -123,7 +126,6 @@ body .hero .ctaContainer h2 {
   font-weight: 700;
   line-height: 70px;
   font-size: 50px;
-  text-indent: -1.1em;
   font-family: "Space Grotesk";
   background: linear-gradient(101.05deg, #FF0000 7.8%, #98C1FF 44%, #0010FF 89.27%);
   background-size: 300%;
@@ -132,24 +134,11 @@ body .hero .ctaContainer h2 {
   -webkit-text-fill-color: transparent;
   animation: animateCtaText 7s linear alternate-reverse both;
 }
-body .hero .ctaContainer h2::before {
-  content: " ";
-  left: 30px;
-  width: 54px;
-  bottom: 4px;
-  height: 55px;
+body .hero .ctaContainer #cShapeSvg {
   position: relative;
-  display: inline-block;
-  background-size: 55px 55px;
-  background-image: url("../../images/vectors/cShape.svg");
-}
-@keyframes animateCtaText {
-  from {
-    background-position: 0%;
-  }
-  to {
-    background-position: 300%;
-  }
+  right: 25px;
+  top: 50px;
+  transition: transform 2s; /* This will make the rotation transition take 2 seconds */
 }
 body .hero .ctaContainer p {
   font-size: 20px;

@@ -71,38 +71,35 @@ body {
             //     height: 100px;
             //     border: 2px solid red;
             //   }
-            h2 {
-                font-weight: 700;
-                line-height: 70px;
-                font-size: 50px;
-                text-indent: -1.1em;
-                font-family: 'Space Grotesk';
-                background: linear-gradient(101.05deg, #FF0000 7.8%, #98C1FF 44%, #0010FF 89.27%);
-                background-size: 300%;
-                background-clip: text;
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                animation: animateCtaText 7s linear alternate-reverse both;
-                &::before {
-                    content: ' ';
-                    left: 30px;
-                    width: 54px;
-                    bottom: 4px;
-                    height: 55px;
+            // .ctaTextAndSvgWrapper {
+                h2 {
+                    font-weight: 700;
+                    line-height: 70px;
+                    font-size: 50px;
+                    font-family: 'Space Grotesk';
+                    background: linear-gradient(101.05deg, #FF0000 7.8%, #98C1FF 44%, #0010FF 89.27%);
+                    background-size: 300%;
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    animation: animateCtaText 7s linear alternate-reverse both;
+                }
+                #cShapeSvg {
                     position: relative;
-                    display: inline-block;
-                    background-size: 55px 55px;
-                    background-image: url("../../images/vectors/cShape.svg");                        
+                    right: 25px;
+                    top: 50px;
+                    transition: transform 2s; /* This will make the rotation transition take 2 seconds */
+                    // rotate: 20deg;
                 }
-            }
-            @keyframes animateCtaText {
-                from {
-                    background-position: 0%;
-                }
-                to {
-                    background-position: 300%;
-                }
-            }
+            // }
+            // @keyframes animateCtaText {
+            //     from {
+            //         background-position: 0%;
+            //     }
+            //     to {
+            //         background-position: 300%;
+            //     }
+            // }
             p {
                 font-size: 20px;
                 color: $primaryColor;
